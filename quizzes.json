@@ -1,0 +1,277 @@
+[
+    {
+        "question": "What is the main cause of global warming?",
+        "options": [
+            "Ozone layer depletion",
+            "Increase in carbon dioxide",
+            "Acid rain",
+            "Fine dust"
+        ],
+        "answer": "Increase in carbon dioxide",
+        "explanation": "The use of fossil fuels due to industrial activities increases the concentration of carbon dioxide in the atmosphere, accelerating global warming."
+    },
+    {
+        "question": "Which of the following is NOT a renewable energy source?",
+        "options": [
+            "Solar power",
+            "Wind power",
+            "Nuclear power",
+            "Geothermal energy"
+        ],
+        "answer": "Nuclear power",
+        "explanation": "Nuclear power uses nuclear fission and produces radioactive waste, so it is not considered a renewable energy source."
+    },
+    {
+        "question": "What is the El Niño phenomenon?",
+        "options": [
+            "Rise in sea surface temperature",
+            "Drop in sea surface temperature",
+            "Increase in polar ice",
+            "Acceleration of desertification"
+        ],
+        "answer": "Rise in sea surface temperature",
+        "explanation": "El Niño refers to a rise in the sea surface temperature in the tropical Pacific Ocean, which affects global weather patterns."
+    },
+    {
+        "question": "Which of the following is NOT an appropriate way to reduce carbon footprint?",
+        "options": [
+            "Using public transportation",
+            "Reducing meat consumption",
+            "Increasing use of disposable products",
+            "Using energy-efficient products"
+        ],
+        "answer": "Increasing use of disposable products",
+        "explanation": "Using disposable products increases waste and carbon emissions during production, increasing the carbon footprint."
+    },
+    {
+        "question": "What is the main goal of the Paris Climate Agreement?",
+        "options": [
+            "Keep global temperature rise well below 2°C above pre-industrial levels and pursue efforts to limit it to 1.5°C",
+            "Support economic growth of developing countries",
+            "Mandate technology transfers from developed countries",
+            "Equal carbon reduction for all countries"
+        ],
+        "answer": "Keep global temperature rise well below 2°C above pre-industrial levels and pursue efforts to limit it to 1.5°C",
+        "explanation": "The Paris Agreement is an international accord to combat climate change, aiming to limit global temperature rise."
+    },
+    {
+        "question": "Which of the following is NOT a greenhouse gas?",
+        "options": [
+            "Methane",
+            "Carbon dioxide",
+            "Oxygen",
+            "Nitrous oxide"
+        ],
+        "answer": "Oxygen",
+        "explanation": "Oxygen is abundant in the atmosphere but does not contribute to the greenhouse effect, so it is not a greenhouse gas."
+    },
+    {
+        "question": "What is the main cause of sea level rise due to climate change?",
+        "options": [
+            "Increased volcanic activity",
+            "Melting of glaciers and polar ice",
+            "Earthquake activity",
+            "Decrease in typhoon frequency"
+        ],
+        "answer": "Melting of glaciers and polar ice",
+        "explanation": "Global warming causes glaciers and polar ice to melt, contributing to rising sea levels."
+    },
+    {
+        "question": "Which of the following is NOT a key element of sustainable development?",
+        "options": [
+            "Environmental protection",
+            "Economic growth",
+            "Social inclusion",
+            "Unrestricted resource extraction"
+        ],
+        "answer": "Unrestricted resource extraction",
+        "explanation": "Sustainable development aims to balance environmental, economic, and social needs without depleting resources."
+    },
+    {
+        "question": "Which area is most directly affected by climate change?",
+        "options": [
+            "Highlands",
+            "Polar regions",
+            "Low-lying coastal areas",
+            "Deserts"
+        ],
+        "answer": "Low-lying coastal areas",
+        "explanation": "Sea level rise threatens low-lying coastal areas with flooding and land loss."
+    },
+    {
+        "question": "What does 'carbon neutral' mean?",
+        "options": [
+            "Completely eliminating carbon emissions",
+            "Trading carbon for money",
+            "Balancing emissions with absorption for net zero emissions",
+            "Managing only carbon dioxide"
+        ],
+        "answer": "Balancing emissions with absorption for net zero emissions",
+        "explanation": "Carbon neutrality means offsetting emitted greenhouse gases to achieve net-zero emissions."
+    },
+    {
+        "question": "Which ecosystem is most severely affected by plastic pollution?",
+        "options": [
+            "Desert ecosystems",
+            "Forest ecosystems",
+            "Marine ecosystems",
+            "Polar ecosystems"
+        ],
+        "answer": "Marine ecosystems",
+        "explanation": "Plastic waste directly harms marine life and threatens ocean ecosystems."
+    },
+    {
+        "question": "Which of the following technologies helps reduce atmospheric greenhouse gases?",
+        "options": [
+            "CCS (Carbon Capture and Storage)",
+            "Building hydropower plants",
+            "Expanding road infrastructure",
+            "Increasing fossil fuel use"
+        ],
+        "answer": "CCS (Carbon Capture and Storage)",
+        "explanation": "CCS captures and stores carbon dioxide to reduce its atmospheric concentration."
+    },
+    {
+        "question": "What is the impact of deforestation on climate change?",
+        "options": [
+            "Cooling the Earth",
+            "Decreasing carbon absorption",
+            "Lowering CO₂ levels",
+            "Stabilizing climate"
+        ],
+        "answer": "Decreasing carbon absorption",
+        "explanation": "Forests absorb carbon dioxide; deforestation reduces this capacity, worsening climate change."
+    },
+    {
+        "question": "Which of the following is NOT an international climate conference?",
+        "options": [
+            "COP",
+            "UNFCCC",
+            "Davos Forum",
+            "Paris Agreement"
+        ],
+        "answer": "Davos Forum",
+        "explanation": "The Davos Forum focuses on economic issues and is not a dedicated climate negotiation platform."
+    },
+    {
+        "question": "What does 'greenwashing' refer to?",
+        "options": [
+            "Spread of green algae",
+            "Marketing that falsely claims eco-friendliness",
+            "Protecting green plants",
+            "Building eco-villages"
+        ],
+        "answer": "Marketing that falsely claims eco-friendliness",
+        "explanation": "Greenwashing is misleading marketing that makes products seem environmentally friendly when they are not."
+    },
+    {
+        "question": "Which of the following is NOT a major cause of biodiversity loss?",
+        "options": [
+            "Habitat destruction",
+            "Climate change",
+            "Invasive species",
+            "Expansion of renewable energy"
+        ],
+        "answer": "Expansion of renewable energy",
+        "explanation": "Renewable energy typically has less impact on biodiversity compared to other destructive activities."
+    },
+    {
+        "question": "What is the main cause of acid rain?",
+        "options": [
+            "Increased nitrogen and sulfur oxides in the air",
+            "Increase in carbon dioxide",
+            "Ozone layer depletion",
+            "Hydrogen gas leakage"
+        ],
+        "answer": "Increased nitrogen and sulfur oxides in the air",
+        "explanation": "These pollutants react with water in the atmosphere to form acid rain."
+    },
+    {
+        "question": "Which of the following is an effect of climate change on marine ecosystems?",
+        "options": [
+            "Increased coral bleaching",
+            "Increased marine biodiversity",
+            "Increased ocean oxygen levels",
+            "Surge in fish populations"
+        ],
+        "answer": "Increased coral bleaching",
+        "explanation": "Rising sea temperatures cause coral bleaching, threatening marine ecosystems."
+    },
+    {
+        "question": "What is the most effective way to reduce the use of single-use plastics?",
+        "options": [
+            "Strengthening plastic waste separation",
+            "Using reusable containers",
+            "Expanding incineration facilities",
+            "Washing plastics thoroughly"
+        ],
+        "answer": "Using reusable containers",
+        "explanation": "Reusable items reduce the need for single-use plastics altogether."
+    },
+    {
+        "question": "What is the main cause of ozone layer depletion?",
+        "options": [
+            "CFCs (Chlorofluorocarbons)",
+            "Carbon dioxide",
+            "Methane",
+            "Fine dust"
+        ],
+        "answer": "CFCs (Chlorofluorocarbons)",
+        "explanation": "CFCs break down ozone molecules, reducing the layer that blocks harmful UV rays."
+    },
+    {
+        "question": "What is a major issue faced by countries vulnerable to climate change?",
+        "options": [
+            "Increased natural disasters",
+            "Decrease in nuclear power",
+            "Population growth",
+            "Reduced exports and imports"
+        ],
+        "answer": "Increased natural disasters",
+        "explanation": "Vulnerable countries face more frequent and intense natural disasters due to climate change."
+    },
+    {
+        "question": "When is Earth Day celebrated each year?",
+        "options": [
+            "March 21",
+            "April 22",
+            "May 5",
+            "June 15"
+        ],
+        "answer": "April 22",
+        "explanation": "Earth Day is a global event to raise awareness of environmental protection."
+    },
+    {
+        "question": "Which of the following helps mitigate the urban heat island effect?",
+        "options": [
+            "Expanding concrete roads",
+            "Increasing green spaces",
+            "Increasing car use",
+            "Building high-rise clusters"
+        ],
+        "answer": "Increasing green spaces",
+        "explanation": "Green areas lower temperatures and improve air quality in cities."
+    },
+    {
+        "question": "Which of the following is NOT a method to reduce energy consumption?",
+        "options": [
+            "Using LED lights",
+            "Unplugging appliances",
+            "Lowering air conditioner temperature",
+            "Installing insulated windows"
+        ],
+        "answer": "Lowering air conditioner temperature",
+        "explanation": "Lower temperatures increase power consumption. Keeping it at 26–28°C is recommended."
+    },
+    {
+        "question": "Which global initiative by the UN includes climate action?",
+        "options": [
+            "MDGs",
+            "COP28",
+            "SDGs",
+            "WTO"
+        ],
+        "answer": "SDGs",
+        "explanation": "The Sustainable Development Goals (SDGs) include climate action as one of the 17 goals."
+    }
+]
