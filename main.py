@@ -278,7 +278,9 @@ def submit_quiz(name):
         detailed_explanation_text += f"  - Explanation: {explanation}\n---\n"
 
     total_questions = len(current_quizzes)
-    percentage_score = (score / total_questions) * 100 if total_questions > 0 else 0
+    percentage_score = (
+        int((score / total_questions) * 100) if total_questions > 0 else 0
+    )
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     try:
@@ -290,7 +292,7 @@ def submit_quiz(name):
     results_data.append(
         {
             "name": name,
-            "score": f"{score}/{total_questions} ({percentage_score:.2f}%)",
+            "score": f"{score}/{total_questions} ({percentage_score}%)",
             "timestamp": timestamp,
         }
     )
@@ -359,7 +361,7 @@ def load_leaderboard():
 
         leaderboard_data.append(
             [
-                f"Rank {actual_rank_display}",
+                f"{actual_rank_display}",
                 res["name"],
                 res["score"],  # 원본 점수 문자열 표시
                 res["timestamp"],
@@ -677,4 +679,4 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
     )
 
 if __name__ == "__main__":
-    demo.launch(share=False, server_name="0.0.0.0", server_port=7861)
+    demo.launch(share=False, server_name="0.0.0.0", server_port=7862)
