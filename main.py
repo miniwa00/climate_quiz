@@ -626,13 +626,8 @@ with gr.Blocks(
                 interactive=False,
             )
 
-    # 탭 선택 이벤트 - Leaderboard 탭 선택 시 자동 새로고침
-    def handle_tab_select(selected_tab):
-        if selected_tab == 1:  # Leaderboard 탭 인덱스 (0: Take Quiz, 1: Leaderboard)
-            return load_leaderboard()
-        return gr.update()
-
-    tabs.select(handle_tab_select, outputs=[leaderboard_display])
+            # 리더보드 탭이 열릴 때 자동으로 새로고침되도록 하는 숨겨진 컴포넌트
+            leaderboard_refresh_trigger = gr.Button("Auto Refresh", visible=False)
 
     # 퀴즈 생성 버튼 클릭 이벤트
     generate_btn.click(
@@ -768,6 +763,13 @@ with gr.Blocks(
     # 리더보드 새로고침 버튼
     refresh_leaderboard_btn.click(load_leaderboard, outputs=[leaderboard_display])
     clear_leaderboard_btn.click(clear_leaderboard, outputs=[leaderboard_display])
+
+    # 페이지 로드시 리더보드 자동 새로고침을 위한 이벤트
+    def auto_refresh_leaderboard():
+        return load_leaderboard()
+
+    # 앱 시작시 리더보드 새로고침
+    demo.load(auto_refresh_leaderboard, outputs=[leaderboard_display])
 
 if __name__ == "__main__":
     demo.launch(share=False, server_name="0.0.0.0", server_port=7862)
