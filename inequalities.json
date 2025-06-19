@@ -1,0 +1,167 @@
+[
+    {
+        "question": "What is the main objective of SDG 10?",
+        "options": [
+            "Reduce poverty",
+            "Promote gender equality",
+            "Reduce inequality within and among countries",
+            "Ensure clean water for all"
+        ],
+        "answer": "Reduce inequality within and among countries",
+        "explanation": "SDG 10 aims to reduce income and opportunity inequalities both within and between countries."
+    },
+    {
+        "question": "Which of the following is a key cause of inequality?",
+        "options": [
+            "Universal healthcare",
+            "Equal access to education",
+            "Discrimination",
+            "Public infrastructure"
+        ],
+        "answer": "Discrimination",
+        "explanation": "Discrimination based on gender, race, or disability can limit access to opportunities and resources."
+    },
+    {
+        "question": "Which group is often disproportionately affected by inequality?",
+        "options": [
+            "Middle-class workers",
+            "Large corporations",
+            "Marginalized communities",
+            "Government officials"
+        ],
+        "answer": "Marginalized communities",
+        "explanation": "Marginalized groups such as ethnic minorities or people with disabilities often face higher inequality."
+    },
+    {
+        "question": "What role do progressive tax systems play in reducing inequality?",
+        "options": [
+            "They increase corporate profits",
+            "They benefit only the rich",
+            "They redistribute wealth",
+            "They reduce government revenue"
+        ],
+        "answer": "They redistribute wealth",
+        "explanation": "Progressive tax systems help reduce inequality by taxing higher incomes at higher rates."
+    },
+    {
+        "question": "Remittances can help reduce inequality by:",
+        "options": [
+            "Increasing national debt",
+            "Sending wealth from poor to rich countries",
+            "Providing income to low-income families",
+            "Reducing employment"
+        ],
+        "answer": "Providing income to low-income families",
+        "explanation": "Remittances are money sent home by migrants and can provide crucial support to families in poorer regions."
+    },
+    {
+        "question": "Which of the following policies can reduce economic inequality?",
+        "options": [
+            "Minimum wage laws",
+            "Tax breaks for the wealthy",
+            "Cutting education funding",
+            "Privatizing healthcare"
+        ],
+        "answer": "Minimum wage laws",
+        "explanation": "Minimum wage laws can ensure fair pay and reduce income disparity."
+    },
+    {
+        "question": "What is the Gini coefficient used for?",
+        "options": [
+            "Measuring poverty",
+            "Measuring education levels",
+            "Measuring income inequality",
+            "Measuring carbon emissions"
+        ],
+        "answer": "Measuring income inequality",
+        "explanation": "The Gini coefficient is a statistical measure of income or wealth distribution."
+    },
+    {
+        "question": "Which global issue is closely linked to inequality?",
+        "options": [
+            "Internet speed",
+            "Climate change",
+            "Space exploration",
+            "Music piracy"
+        ],
+        "answer": "Climate change",
+        "explanation": "Climate change disproportionately affects vulnerable populations, worsening existing inequalities."
+    },
+    {
+        "question": "Equal access to education helps reduce inequality by:",
+        "options": [
+            "Decreasing competition",
+            "Lowering innovation",
+            "Increasing social mobility",
+            "Raising taxes"
+        ],
+        "answer": "Increasing social mobility",
+        "explanation": "Education equips people with skills and knowledge to improve their socioeconomic status."
+    },
+    {
+        "question": "What does 'inclusive growth' refer to?",
+        "options": [
+            "Growth that benefits only the rich",
+            "Economic growth that includes marginalized groups",
+            "Slow economic growth",
+            "Growth through automation"
+        ],
+        "answer": "Economic growth that includes marginalized groups",
+        "explanation": "Inclusive growth ensures everyone shares in the benefits of economic progress."
+    },
+    {
+        "question": "Which of the following can widen inequality if not addressed?",
+        "options": [
+            "Public health campaigns",
+            "Gender wage gap",
+            "Free primary education",
+            "Social welfare programs"
+        ],
+        "answer": "Gender wage gap",
+        "explanation": "When women are paid less than men for the same work, it contributes to economic inequality."
+    },
+    {
+        "question": "How can migration contribute to reducing inequality?",
+        "options": [
+            "It always creates unemployment",
+            "Migrants reduce GDP",
+            "Migrants often send remittances home",
+            "It reduces social diversity"
+        ],
+        "answer": "Migrants often send remittances home",
+        "explanation": "Remittances help reduce inequality by providing income support to families in origin countries."
+    },
+    {
+        "question": "Which of the following is an indicator used to track inequality?",
+        "options": [
+            "Life expectancy",
+            "Gini index",
+            "CO2 emissions",
+            "Unemployment rate"
+        ],
+        "answer": "Gini index",
+        "explanation": "The Gini index is commonly used to measure inequality in income distribution."
+    },
+    {
+        "question": "What type of inequality does SDG 10 aim to address?",
+        "options": [
+            "Only income inequality",
+            "Only gender inequality",
+            "Economic, social, and political inequality",
+            "Inequality between plants and animals"
+        ],
+        "answer": "Economic, social, and political inequality",
+        "explanation": "SDG 10 addresses a broad range of inequalities, including income, social status, and political inclusion."
+    },
+    {
+        "question": "Which of the following actions can promote reduced inequalities?",
+        "options": [
+            "Restricting access to healthcare",
+            "Ensuring equal rights for all",
+            "Cutting social programs",
+            "Ignoring disabled populations"
+        ],
+        "answer": "Ensuring equal rights for all",
+        "explanation": "Protecting equal rights helps build inclusive societies and reduce inequality."
+    }
+]

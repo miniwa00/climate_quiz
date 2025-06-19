@@ -1,0 +1,167 @@
+[
+    {
+        "question": "What is the primary goal of SDG 1?",
+        "options": [
+            "Ensure quality education",
+            "End poverty in all its forms everywhere",
+            "Promote economic growth",
+            "Combat climate change"
+        ],
+        "answer": "End poverty in all its forms everywhere",
+        "explanation": "SDG 1 aims to eradicate extreme poverty for all people everywhere."
+    },
+    {
+        "question": "Which region has the highest rate of extreme poverty?",
+        "options": [
+            "South America",
+            "Southeast Asia",
+            "Sub-Saharan Africa",
+            "Eastern Europe"
+        ],
+        "answer": "Sub-Saharan Africa",
+        "explanation": "Sub-Saharan Africa has the highest percentage of people living under the international poverty line."
+    },
+    {
+        "question": "What is considered the international poverty line as of 2023?",
+        "options": [
+            "$1.90 per day",
+            "$2.15 per day",
+            "$5.00 per day",
+            "$3.50 per day"
+        ],
+        "answer": "$2.15 per day",
+        "explanation": "The World Bank updated the international poverty line to $2.15 per day in 2022."
+    },
+    {
+        "question": "Which organization is primarily responsible for monitoring global poverty?",
+        "options": [
+            "UNESCO",
+            "WHO",
+            "World Bank",
+            "UNEP"
+        ],
+        "answer": "World Bank",
+        "explanation": "The World Bank tracks and reports data related to global poverty."
+    },
+    {
+        "question": "Which of the following is a major cause of poverty?",
+        "options": [
+            "Access to education",
+            "Lack of employment opportunities",
+            "High literacy rates",
+            "Technological advancement"
+        ],
+        "answer": "Lack of employment opportunities",
+        "explanation": "Unemployment limits people's ability to earn income and escape poverty."
+    },
+    {
+        "question": "Microfinance is used to:",
+        "options": [
+            "Increase inflation",
+            "Support small businesses in low-income communities",
+            "Build large corporations",
+            "Pay off national debt"
+        ],
+        "answer": "Support small businesses in low-income communities",
+        "explanation": "Microfinance provides small loans to help individuals start or expand small businesses."
+    },
+    {
+        "question": "Which of the following can help reduce child poverty?",
+        "options": [
+            "Higher military spending",
+            "Access to clean water",
+            "Job cuts",
+            "Pollution"
+        ],
+        "answer": "Access to clean water",
+        "explanation": "Clean water improves health and school attendance, helping break the cycle of poverty."
+    },
+    {
+        "question": "What is a common result of poverty?",
+        "options": [
+            "Improved health",
+            "Access to higher education",
+            "Malnutrition",
+            "Urban development"
+        ],
+        "answer": "Malnutrition",
+        "explanation": "Poverty often leads to food insecurity and malnutrition, especially among children."
+    },
+    {
+        "question": "Which of the following sectors is most important for rural poverty reduction?",
+        "options": [
+            "Mining",
+            "Agriculture",
+            "Tourism",
+            "Real estate"
+        ],
+        "answer": "Agriculture",
+        "explanation": "Agriculture is a primary livelihood for many in rural areas and is key to reducing rural poverty."
+    },
+    {
+        "question": "Social protection programs are designed to:",
+        "options": [
+            "Support high-income groups",
+            "Reduce taxes",
+            "Help vulnerable populations",
+            "Privatize public services"
+        ],
+        "answer": "Help vulnerable populations",
+        "explanation": "Social protection provides support such as cash transfers or food aid to those in need."
+    },
+    {
+        "question": "Which event can push vulnerable populations into poverty?",
+        "options": [
+            "Winning the lottery",
+            "Economic recession",
+            "Technological innovation",
+            "Free trade agreements"
+        ],
+        "answer": "Economic recession",
+        "explanation": "Recessions can lead to job losses and reduced income, pushing people into poverty."
+    },
+    {
+        "question": "Universal basic income is a concept that involves:",
+        "options": [
+            "Giving money only to the elderly",
+            "Providing a fixed income to all citizens",
+            "Eliminating all taxes",
+            "Increasing food prices"
+        ],
+        "answer": "Providing a fixed income to all citizens",
+        "explanation": "UBI is a proposed policy where every citizen receives a set amount of money regularly."
+    },
+    {
+        "question": "Education helps reduce poverty by:",
+        "options": [
+            "Reducing migration",
+            "Creating dependency",
+            "Increasing job opportunities",
+            "Limiting innovation"
+        ],
+        "answer": "Increasing job opportunities",
+        "explanation": "Education improves skills and increases employability, which can lift people out of poverty."
+    },
+    {
+        "question": "Which of the following is a direct indicator of poverty?",
+        "options": [
+            "Internet speed",
+            "GDP per capita",
+            "Life expectancy",
+            "Access to sanitation"
+        ],
+        "answer": "Access to sanitation",
+        "explanation": "Lack of access to sanitation is a key indicator of multidimensional poverty."
+    },
+    {
+        "question": "Which SDG number is associated with poverty eradication?",
+        "options": [
+            "SDG 1",
+            "SDG 3",
+            "SDG 5",
+            "SDG 8"
+        ],
+        "answer": "SDG 1",
+        "explanation": "SDG 1 focuses on ending poverty in all its forms everywhere."
+    }
+]

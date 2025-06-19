@@ -24,15 +24,37 @@ user_answers = {}
 
 def generate_quiz():
     """
-    Gemini API를 사용하여 5개의 4지선다 기후 퀴즈를 생성합니다.
-    실제 API 호출 대신 임시 데이터를 사용합니다.
+    세 개의 JSON 파일에서 문제를 가져와 랜덤으로 섞어서 퀴즈를 생성합니다.
+    climate.json: 4문제, poverty.json: 3문제, inequalities.json: 3문제
     """
     global current_quizzes, current_quiz_index, user_answers
     # TODO: Gemini API를 호출하여 실제 퀴즈 데이터를 가져옵니다.
 
     import random
 
-    current_quizzes = random.sample(json.load(open("quizzes.json")), 5)
+    try:
+        # 각 파일에서 문제 로드
+        with open("climate.json", "r") as f:
+            climate_quizzes = json.load(f)
+        with open("poverty.json", "r") as f:
+            poverty_quizzes = json.load(f)
+        with open("inequalities.json", "r") as f:
+            inequalities_quizzes = json.load(f)
+
+        # 각 카테고리에서 지정된 수만큼 랜덤 선택
+        selected_climate = random.sample(climate_quizzes, min(4, len(climate_quizzes)))
+        selected_poverty = random.sample(poverty_quizzes, min(3, len(poverty_quizzes)))
+        selected_inequalities = random.sample(
+            inequalities_quizzes, min(3, len(inequalities_quizzes))
+        )
+
+        # 모든 문제를 합치고 랜덤으로 섞기
+        current_quizzes = selected_climate + selected_poverty + selected_inequalities
+        random.shuffle(current_quizzes)
+
+    except (FileNotFoundError, json.JSONDecodeError) as e:
+        print(f"Error loading quiz files: {e}")
+        current_quizzes = []
 
     current_quiz_index = 0
     user_answers = {}  # 새 퀴즈 생성 시 사용자 답변 초기화
@@ -59,7 +81,7 @@ def generate_quiz():
             gr.update(visible=False),  # quiz_area (숨김)
             gr.update(visible=False),  # results_display_area (숨김)
             gr.update(
-                value="Failed to generate quizzes. Please try again later."
+                value="Failed to generate quizzes. Please check if all quiz files (climate.json, poverty.json, inequalities.json) exist."
             ),  # quiz_status_msg
             generate_btn_update,  # 현재 상태(비활성) 유지
             home_btn_in_quiz_view_update,  # 현재 상태(활성) 유지
@@ -70,13 +92,15 @@ def generate_quiz():
             gr.update(interactive=False, visible=False),  # review_complete_btn
             submit_area_update,
             gr.update(value=""),  # user_name_input
+            gr.update(value=None),  # user_age_input
+            gr.update(value=""),  # user_country_input
             gr.update(interactive=False),  # submit_btn
             review_summary_display_update,
             submission_feedback_update,  # 결과 영역내 컴포넌트 초기화
             final_explanation_display_update,  # 결과 영역내 컴포넌트 초기화
         )
 
-    first_quiz_display_outputs = display_quiz(0)  # 이제 10개 항목 반환
+    first_quiz_display_outputs = display_quiz(0)  # 이제 12개 항목 반환
 
     return (
         initial_landing_image_update,  # 1
@@ -85,23 +109,25 @@ def generate_quiz():
         quiz_status_msg_update,  # 4
         generate_btn_update,  # 현재 상태(비활성) 유지
         home_btn_in_quiz_view_update,  # 현재 상태(활성) 유지
-        first_quiz_display_outputs[0],  # quiz_question (display_quiz[0]) #5
-        first_quiz_display_outputs[2],  # quiz_options (display_quiz[2]) #6
-        first_quiz_display_outputs[3],  # prev_btn (display_quiz[3]) #7
-        first_quiz_display_outputs[4],  # next_btn (display_quiz[4]) #8
-        first_quiz_display_outputs[5],  # review_complete_btn (display_quiz[5]) #9
-        first_quiz_display_outputs[6],  # submit_area (display_quiz[6]) #10
-        first_quiz_display_outputs[7],  # user_name_input (display_quiz[7]) #11
-        first_quiz_display_outputs[8],  # submit_btn (display_quiz[8]) #12
-        first_quiz_display_outputs[9],  # review_summary_display (display_quiz[9]) #13
-        submission_feedback_update,  # 14
-        final_explanation_display_update,  # 15
+        first_quiz_display_outputs[0],  # quiz_question (display_quiz[0]) #7
+        first_quiz_display_outputs[2],  # quiz_options (display_quiz[2]) #8
+        first_quiz_display_outputs[3],  # prev_btn (display_quiz[3]) #9
+        first_quiz_display_outputs[4],  # next_btn (display_quiz[4]) #10
+        first_quiz_display_outputs[5],  # review_complete_btn (display_quiz[5]) #11
+        first_quiz_display_outputs[6],  # submit_area (display_quiz[6]) #12
+        first_quiz_display_outputs[7],  # user_name_input (display_quiz[7]) #13
+        first_quiz_display_outputs[8],  # user_age_input (display_quiz[8]) #14
+        first_quiz_display_outputs[9],  # user_country_input (display_quiz[9]) #15
+        first_quiz_display_outputs[10],  # submit_btn (display_quiz[10]) #16
+        first_quiz_display_outputs[11],  # review_summary_display (display_quiz[11]) #17
+        submission_feedback_update,  # 18
+        final_explanation_display_update,  # 19
     )
 
 
 def display_quiz(index):
     """
-    현재 인덱스에 해당하는 퀴즈를 표시합니다. (10개 항목 반환)
+    현재 인덱스에 해당하는 퀴즈를 표시합니다. (12개 항목 반환)
     """
     global current_quizzes, current_quiz_index
     submit_area_update = gr.update(visible=False)
@@ -117,7 +143,9 @@ def display_quiz(index):
             gr.update(interactive=False, visible=False),  # review_complete_btn
             submit_area_update,
             gr.update(value=""),  # user_name_input
-            gr.update(interactive=False),  # submit_btn
+            gr.update(value=None),  # user_age_input
+            gr.update(value=""),  # user_country_input
+            gr.update(interactive=False),  # submit_btn 초기화
             review_summary_display_update,
         )
 
@@ -148,8 +176,10 @@ def display_quiz(index):
         review_complete_btn_update,  # 6
         submit_area_update,  # 7 기본적으로 숨김, handle_review_complete에서 표시
         gr.update(value=""),  # 8 user_name_input 초기화
-        gr.update(interactive=False),  # 9 submit_btn 초기화
-        review_summary_display_update,  # 10 기본적으로 숨김, handle_review_complete에서 표시
+        gr.update(value=None),  # 9 user_age_input 초기화
+        gr.update(value=""),  # 10 user_country_input 초기화
+        gr.update(interactive=False),  # 11 submit_btn 초기화
+        review_summary_display_update,  # 12 기본적으로 숨김, handle_review_complete에서 표시
     )
 
 
@@ -186,6 +216,8 @@ def handle_review_complete():
             gr.update(value="Error: No quiz data to review.", visible=True),
             gr.update(visible=False),
             gr.update(value=""),
+            gr.update(value=None),
+            gr.update(value=""),
             gr.update(interactive=False),
             gr.update(visible=False, interactive=False),
         )
@@ -203,12 +235,14 @@ def handle_review_complete():
         gr.update(value=review_text, visible=True),  # review_summary_display
         gr.update(visible=True),  # submit_area
         gr.update(value=""),  # user_name_input 초기화
+        gr.update(value=None),  # user_age_input 초기화
+        gr.update(value=""),  # user_country_input 초기화
         gr.update(interactive=True),  # submit_btn 활성화
         gr.update(visible=False, interactive=False),  # review_complete_btn 숨기기
     )
 
 
-def submit_quiz(name):
+def submit_quiz(name, age, country):
     """
     퀴즈를 제출하고 점수를 계산하여 저장합니다.
     """
@@ -225,9 +259,11 @@ def submit_quiz(name):
         visible=False, interactive=False
     )  # 결과화면에선 이 버튼 숨김
 
-    if not name:
-        quiz_status_msg_update = gr.update(value="# ⚠️ Please enter your name.")
-        # 이름 미입력 시, 현재 UI (quiz_area 내 submit_area) 유지
+    if not name or not age or not country:
+        quiz_status_msg_update = gr.update(
+            value="# ⚠️ Please fill in all fields (name, age, country)."
+        )
+        # 정보 미입력 시, 현재 UI (quiz_area 내 submit_area) 유지
         return (
             gr.update(visible=False),  # initial_landing_image
             gr.update(visible=True),  # quiz_area (유지)
@@ -292,6 +328,8 @@ def submit_quiz(name):
     results_data.append(
         {
             "name": name,
+            "age": int(age),
+            "country": country,
             "score": f"{score}/{total_questions} ({percentage_score}%)",
             "timestamp": timestamp,
         }
@@ -334,7 +372,9 @@ def load_leaderboard():
         results = []
 
     if not results:
-        return pd.DataFrame(columns=["Rank", "Name", "Score", "Timestamp"])
+        return pd.DataFrame(
+            columns=["Rank", "Name", "Age", "Country", "Score", "Timestamp"]
+        )
 
     # 점수 추출 및 정수 변환 (예: "3/5" -> 3)
     for res in results:
@@ -363,6 +403,8 @@ def load_leaderboard():
             [
                 f"{actual_rank_display}",
                 res["name"],
+                str(res.get("age", "N/A")),
+                res.get("country", "N/A"),
                 res["score"],  # 원본 점수 문자열 표시
                 res["timestamp"],
             ]
@@ -377,7 +419,7 @@ def clear_leaderboard():
     if os.path.exists(RESULTS_FILE):
         with open(RESULTS_FILE, "w") as f:
             json.dump([], f)
-    return "Leaderboard has been reset.", load_leaderboard()
+    return load_leaderboard()
 
 
 def return_to_home():
@@ -391,6 +433,8 @@ def return_to_home():
     review_summary_display_update = gr.update(value="", visible=False)
     submit_area_update = gr.update(visible=False)
     user_name_input_update = gr.update(value="")
+    user_age_input_update = gr.update(value=None)
+    user_country_input_update = gr.update(value="")
     submit_btn_update = gr.update(interactive=False)
     quiz_status_msg_update = gr.update(value="")
     submission_feedback_update = gr.update(value="")
@@ -424,6 +468,8 @@ def return_to_home():
         review_complete_btn_update,
         submit_area_update,
         user_name_input_update,
+        user_age_input_update,
+        user_country_input_update,
         submit_btn_update,
         review_summary_display_update,
         submission_feedback_update,
@@ -447,6 +493,8 @@ def go_to_home_from_quiz_view():
     review_summary_display_update = gr.update(value="", visible=False)
     submit_area_update = gr.update(visible=False)
     user_name_input_update = gr.update(value="")
+    user_age_input_update = gr.update(value=None)
+    user_country_input_update = gr.update(value="")
     submit_btn_update = gr.update(interactive=False)
     quiz_status_msg_update = gr.update(value="")
     submission_feedback_update = gr.update(value="")
@@ -473,6 +521,8 @@ def go_to_home_from_quiz_view():
         review_complete_btn_update,
         submit_area_update,
         user_name_input_update,
+        user_age_input_update,
+        user_country_input_update,
         submit_btn_update,
         review_summary_display_update,
         submission_feedback_update,
@@ -481,13 +531,21 @@ def go_to_home_from_quiz_view():
 
 
 # Gradio 인터페이스 정의
-with gr.Blocks(theme=gr.themes.Soft()) as demo:
-    gr.Markdown("# 🧊 Climate Change Quiz 🌍")
+with gr.Blocks(
+    theme=gr.themes.Soft(),
+    css="""
+    * {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+    }
+    """,
+) as demo:
+    gr.Markdown("# My SDG Compass 🌍")
 
-    with gr.Tabs():
+    tabs = gr.Tabs()
+    with tabs:
         with gr.TabItem("Take Quiz"):
             initial_landing_image = gr.Image(
-                "landing.png",
+                "start.png",
                 elem_id="landing_image",
                 width=500,
                 visible=True,
@@ -520,8 +578,8 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
                     label="Choose your answer", choices=[], interactive=True
                 )
                 with gr.Row():
-                    prev_btn = gr.Button("Previous Quiz", interactive=False)
-                    next_btn = gr.Button("Next Quiz", interactive=False)
+                    prev_btn = gr.Button("Previous Question", interactive=False)
+                    next_btn = gr.Button("Next Question", interactive=False)
                     review_complete_btn = gr.Button(
                         "Review Complete", interactive=False, visible=False
                     )
@@ -530,11 +588,29 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
                     user_name_input = gr.Textbox(
                         label="Enter your name:", placeholder="e.g., John Doe"
                     )
+                    user_age_input = gr.Number(
+                        label="Enter your age (1-120):",
+                        minimum=1,
+                        maximum=120,
+                        precision=0,
+                    )
+                    user_country_input = gr.Textbox(
+                        label="Enter your country:", placeholder="e.g., South Korea"
+                    )
                     submit_btn = gr.Button(
                         "Submit", variant="primary", interactive=False
                     )
 
             with gr.Column(visible=False) as results_display_area:
+                end_image = gr.Image(
+                    "end.png",
+                    elem_id="end_image",
+                    width=500,
+                    visible=True,
+                    show_label=False,
+                    show_download_button=False,
+                    show_fullscreen_button=False,
+                )
                 submission_feedback = gr.Markdown("")  # 최종 점수 요약
                 final_explanation_display = gr.Markdown("")  # 문제별 해설
                 return_to_home_btn = gr.Button("Return to Home", variant="secondary")
@@ -545,11 +621,18 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
                 clear_leaderboard_btn = gr.Button("⚠️ Reset Leaderboard", variant="stop")
             leaderboard_display = gr.DataFrame(
                 value=load_leaderboard(),
-                headers=["Rank", "Name", "Score", "Timestamp"],
-                datatype=["str", "str", "str", "str"],
+                headers=["Rank", "Name", "Age", "Country", "Score", "Timestamp"],
+                datatype=["str", "str", "str", "str", "str", "str"],
                 interactive=False,
             )
-            clear_status_msg = gr.Markdown("")
+
+    # 탭 선택 이벤트 - Leaderboard 탭 선택 시 자동 새로고침
+    def handle_tab_select(selected_tab):
+        if selected_tab == 1:  # Leaderboard 탭 인덱스 (0: Take Quiz, 1: Leaderboard)
+            return load_leaderboard()
+        return gr.update()
+
+    tabs.select(handle_tab_select, outputs=[leaderboard_display])
 
     # 퀴즈 생성 버튼 클릭 이벤트
     generate_btn.click(
@@ -568,6 +651,8 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
             review_complete_btn,
             submit_area,
             user_name_input,
+            user_age_input,
+            user_country_input,
             submit_btn,
             review_summary_display,
             submission_feedback,
@@ -575,7 +660,7 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
         ],
     )
 
-    # 이전/다음 버튼은 display_quiz의 반환값(10개)을 정확히 매핑해야 함
+    # 이전/다음 버튼은 display_quiz의 반환값(12개)을 정확히 매핑해야 함
     quiz_navigation_outputs = [
         quiz_question,
         quiz_status_msg,  # display_quiz에서 오는 빈 문자열을 받음
@@ -585,6 +670,8 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
         review_complete_btn,
         submit_area,
         user_name_input,
+        user_age_input,
+        user_country_input,
         submit_btn,
         review_summary_display,
     ]
@@ -602,6 +689,8 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
             review_summary_display,
             submit_area,
             user_name_input,
+            user_age_input,
+            user_country_input,
             submit_btn,
             review_complete_btn,
         ],
@@ -610,7 +699,7 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
     # 제출하기 버튼 클릭 이벤트
     submit_btn.click(
         submit_quiz,
-        inputs=[user_name_input],
+        inputs=[user_name_input, user_age_input, user_country_input],
         outputs=[
             initial_landing_image,
             quiz_area,
@@ -641,6 +730,8 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
             review_complete_btn,
             submit_area,
             user_name_input,
+            user_age_input,
+            user_country_input,
             submit_btn,
             review_summary_display,
             submission_feedback,
@@ -665,6 +756,8 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
             review_complete_btn,
             submit_area,
             user_name_input,
+            user_age_input,
+            user_country_input,
             submit_btn,
             review_summary_display,
             submission_feedback,
@@ -674,9 +767,7 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
 
     # 리더보드 새로고침 버튼
     refresh_leaderboard_btn.click(load_leaderboard, outputs=[leaderboard_display])
-    clear_leaderboard_btn.click(
-        clear_leaderboard, outputs=[clear_status_msg, leaderboard_display]
-    )
+    clear_leaderboard_btn.click(clear_leaderboard, outputs=[leaderboard_display])
 
 if __name__ == "__main__":
     demo.launch(share=False, server_name="0.0.0.0", server_port=7862)

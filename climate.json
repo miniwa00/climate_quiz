@@ -1,0 +1,167 @@
+[
+    {
+        "question": "What is the main goal of SDG 13?",
+        "options": [
+            "Protect marine life",
+            "Promote sustainable agriculture",
+            "Take urgent action to combat climate change and its impacts",
+            "Ensure clean water for all"
+        ],
+        "answer": "Take urgent action to combat climate change and its impacts",
+        "explanation": "SDG 13 focuses on addressing climate change through mitigation, adaptation, and education."
+    },
+    {
+        "question": "Which gas is the primary contributor to global warming?",
+        "options": [
+            "Nitrogen",
+            "Carbon dioxide (CO2)",
+            "Oxygen",
+            "Hydrogen"
+        ],
+        "answer": "Carbon dioxide (CO2)",
+        "explanation": "CO2 is the most abundant greenhouse gas emitted by human activities."
+    },
+    {
+        "question": "What is the greenhouse effect?",
+        "options": [
+            "Cooling of Earth due to clouds",
+            "Blocking of sunlight by ozone",
+            "Warming of Earth’s surface by trapped gases",
+            "Absorption of heat by the ocean"
+        ],
+        "answer": "Warming of Earth’s surface by trapped gases",
+        "explanation": "The greenhouse effect is caused by gases trapping heat in the atmosphere, warming the planet."
+    },
+    {
+        "question": "Which international agreement aims to limit global warming to below 2°C?",
+        "options": [
+            "Kyoto Protocol",
+            "Paris Agreement",
+            "Montreal Protocol",
+            "Copenhagen Accord"
+        ],
+        "answer": "Paris Agreement",
+        "explanation": "The Paris Agreement aims to keep global temperature rise this century below 2°C."
+    },
+    {
+        "question": "Which of the following is a renewable energy source?",
+        "options": [
+            "Coal",
+            "Natural gas",
+            "Solar power",
+            "Nuclear energy"
+        ],
+        "answer": "Solar power",
+        "explanation": "Solar power is a renewable source that generates electricity using sunlight."
+    },
+    {
+        "question": "What sector is the largest contributor to greenhouse gas emissions globally?",
+        "options": [
+            "Transport",
+            "Industry",
+            "Agriculture",
+            "Energy production"
+        ],
+        "answer": "Energy production",
+        "explanation": "Burning fossil fuels for electricity and heat is the largest source of global greenhouse gas emissions."
+    },
+    {
+        "question": "What is carbon footprint?",
+        "options": [
+            "Amount of CO2 a country stores",
+            "Land covered by trees",
+            "Total greenhouse gas emissions caused by an individual or entity",
+            "Footprint size on carbon soil"
+        ],
+        "answer": "Total greenhouse gas emissions caused by an individual or entity",
+        "explanation": "A carbon footprint measures the total emissions from all activities, including transport and consumption."
+    },
+    {
+        "question": "Which of the following helps reduce carbon footprint?",
+        "options": [
+            "Using single-use plastics",
+            "Driving more",
+            "Planting trees",
+            "Eating more red meat"
+        ],
+        "answer": "Planting trees",
+        "explanation": "Trees absorb CO2 from the atmosphere, helping to offset carbon emissions."
+    },
+    {
+        "question": "Rising global temperatures can cause:",
+        "options": [
+            "More stable weather patterns",
+            "Lower sea levels",
+            "Increased ice formation",
+            "More frequent extreme weather events"
+        ],
+        "answer": "More frequent extreme weather events",
+        "explanation": "Climate change increases the frequency and severity of events like floods, droughts, and storms."
+    },
+    {
+        "question": "Which of the following is a consequence of climate change?",
+        "options": [
+            "Increased biodiversity",
+            "Melting glaciers",
+            "More freshwater availability",
+            "Less desertification"
+        ],
+        "answer": "Melting glaciers",
+        "explanation": "Rising temperatures cause glaciers and polar ice caps to melt, contributing to sea level rise."
+    },
+    {
+        "question": "What is climate adaptation?",
+        "options": [
+            "Using more fossil fuels",
+            "Changing habits to ignore climate",
+            "Adjusting systems to reduce harm from climate impacts",
+            "Stopping all greenhouse gas emissions"
+        ],
+        "answer": "Adjusting systems to reduce harm from climate impacts",
+        "explanation": "Adaptation involves modifying infrastructure, agriculture, and lifestyles to cope with climate impacts."
+    },
+    {
+        "question": "Which human activity contributes most to deforestation?",
+        "options": [
+            "Urban gardening",
+            "Industrial logging and agriculture",
+            "Building greenhouses",
+            "Recycling"
+        ],
+        "answer": "Industrial logging and agriculture",
+        "explanation": "Large-scale agriculture and logging are primary drivers of deforestation worldwide."
+    },
+    {
+        "question": "Which of the following personal actions helps fight climate change?",
+        "options": [
+            "Flying frequently",
+            "Reducing meat consumption",
+            "Leaving lights on",
+            "Using disposable items"
+        ],
+        "answer": "Reducing meat consumption",
+        "explanation": "Meat production has a large carbon footprint; reducing meat intake helps lower emissions."
+    },
+    {
+        "question": "What role do wetlands play in climate change mitigation?",
+        "options": [
+            "They increase CO2 emissions",
+            "They produce fossil fuels",
+            "They act as carbon sinks",
+            "They reduce oxygen in air"
+        ],
+        "answer": "They act as carbon sinks",
+        "explanation": "Wetlands absorb and store large amounts of carbon, helping mitigate climate change."
+    },
+    {
+        "question": "What does the term 'net zero emissions' mean?",
+        "options": [
+            "No use of electricity",
+            "Total stop of energy consumption",
+            "Balancing emitted and removed greenhouse gases",
+            "Emitting only methane"
+        ],
+        "answer": "Balancing emitted and removed greenhouse gases",
+        "explanation": "Net zero means achieving a balance between greenhouse gases emitted and those removed from the atmosphere."
+    }
+]
