@@ -19,7 +19,7 @@ jobs:
 
       - name: Clean deploy main.py to EC2
         run: |
-          ssh -o StrictHostKeyChecking=no ec2-user@${{ secrets.EC2_HOST }} << 'EOF'
+          ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.EC2_HOST }} << 'EOF'
             # 1. 실행 중인 Python 프로세스 종료
             pkill -f main.py || true
 
