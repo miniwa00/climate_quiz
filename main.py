@@ -545,7 +545,7 @@ with gr.Blocks(
     with tabs:
         with gr.TabItem("Take Quiz"):
             initial_landing_image = gr.Image(
-                "start.png",
+                "start_new.png",
                 elem_id="landing_image",
                 width=500,
                 visible=True,
@@ -603,7 +603,7 @@ with gr.Blocks(
 
             with gr.Column(visible=False) as results_display_area:
                 end_image = gr.Image(
-                    "end.png",
+                    "end_new.png",
                     elem_id="end_image",
                     width=500,
                     visible=True,
